@@ -1,0 +1,6 @@
+{
+  "name": "New View Roofing",
+  "description": "Premium roofing services website recreation and redesign for New View Roofing, featuring residential, commercial, and storm damage repair solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
