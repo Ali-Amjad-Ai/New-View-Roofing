@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import MainHero from './components/MainHero';
 import InteractiveMap from './components/InteractiveMap';
 import InspectionForm from './components/InspectionForm';
+import AccessibilityWidget from './components/AccessibilityWidget';
 import {
   Shield,
   Award,
@@ -659,6 +660,9 @@ export default function App() {
 
       {/* Universal Sticky Footer */}
       <Footer onNavigate={handleNavigate} />
+
+      {/* Dynamic Accessibility Suite Widget */}
+      <AccessibilityWidget />
     </div>
   );
 }

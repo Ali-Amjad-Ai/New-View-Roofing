@@ -49,4 +49,144 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* ==========================================================================
+   Accessibility Utilities (Dynamic classes added by AccessibilityWidget)
+   ========================================================================== */
+
+/* Text Sizing Scales */
+.acc-text-large {
+  font-size: 1.15rem !important;
+}
+.acc-text-large p, .acc-text-large span, .acc-text-large li, .acc-text-large a {
+  font-size: 1.125rem !important;
+}
+.acc-text-large h1 { font-size: 3.5rem !important; }
+.acc-text-large h2 { font-size: 2.75rem !important; }
+.acc-text-large h3 { font-size: 2.25rem !important; }
+
+.acc-text-xl {
+  font-size: 1.3rem !important;
+}
+.acc-text-xl p, .acc-text-xl span, .acc-text-xl li, .acc-text-xl a {
+  font-size: 1.25rem !important;
+}
+.acc-text-xl h1 { font-size: 4rem !important; }
+.acc-text-xl h2 { font-size: 3.25rem !important; }
+.acc-text-xl h3 { font-size: 2.5rem !important; }
+
+/* Line Heights */
+.acc-line-loose p, .acc-line-loose li, .acc-line-loose div {
+  line-height: 1.85 !important;
+}
+.acc-line-extra-loose p, .acc-line-extra-loose li, .acc-line-extra-loose div {
+  line-height: 2.2 !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Alignments */
+.acc-align-left p, .acc-align-left div, .acc-align-left li {
+  text-align: left !important;
+}
+.acc-align-justify p, .acc-align-justify div, .acc-align-justify li {
+  text-align: justify !important;
+}
+
+/* Dyslexia-friendly Font Settings (Open Sans-serif wide letters) */
+.acc-readable-font {
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif !important;
+  letter-spacing: 0.08em !important;
+  word-spacing: 0.15em !important;
+}
+.acc-readable-font h1, .acc-readable-font h2, .acc-readable-font h3, 
+.acc-readable-font h4, .acc-readable-font h5, .acc-readable-font h6, 
+.acc-readable-font p, .acc-readable-font span, .acc-readable-font a, 
+.acc-readable-font li, .acc-readable-font button {
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif !important;
+}
+
+/* Extreme Contrast Override: Solid pure black backgrounds & extreme contrast content */
+.acc-contrast-high {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+.acc-contrast-high main, 
+.acc-contrast-high section, 
+.acc-contrast-high div:not(#accessibility-control-panel):not(#accessibility-control-panel *),
+.acc-contrast-high header, 
+.acc-contrast-high footer,
+.acc-contrast-high nav {
+  background: #000000 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: none !important;
+}
+.acc-contrast-high h1, 
+.acc-contrast-high h2, 
+.acc-contrast-high h3, 
+.acc-contrast-high h4, 
+.acc-contrast-high h5, 
+.acc-contrast-high h6 {
+  color: #fef08a !important; /* High contrast yellow text for headers */
+}
+.acc-contrast-high p, 
+.acc-contrast-high span, 
+.acc-contrast-high li, 
+.acc-contrast-high label {
+  color: #ffffff !important;
+}
+.acc-contrast-high a, 
+.acc-contrast-high button:not(#accessibility-control-panel *):not(#accessibility-floating-trigger) {
+  background-color: #000000 !important;
+  color: #38bdf8 !important; /* Bright cyan links */
+  border: 2px solid #38bdf8 !important;
+  text-decoration: underline !important;
+}
+
+/* Inverted contrast filter (Inverts color palette globally) */
+.acc-contrast-inverted {
+  filter: invert(100%) hue-rotate(180deg);
+}
+.acc-contrast-inverted #accessibility-control-panel,
+.acc-contrast-inverted #accessibility-floating-trigger,
+.acc-contrast-inverted #accessibility-reading-mask-band {
+  filter: invert(100%) hue-rotate(180deg) !important; /* Keep the widget controls visually normal so the user can see them! */
+}
+
+/* Grayscale */
+.acc-grayscale {
+  filter: grayscale(100%) !important;
+}
+
+/* Hide Images & Svg decorations to reduce visual clutter */
+.acc-hide-images img,
+.acc-hide-images svg:not(.nav-logo):not(#accessibility-control-panel *):not(#accessibility-floating-trigger *) {
+  display: none !important;
+}
+
+/* Disable Animations and Motion effects */
+.acc-pause-animations,
+.acc-pause-animations * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Link and Button Highlighting */
+.acc-highlight-links a,
+.acc-highlight-links button:not(#accessibility-control-panel *):not(#accessibility-floating-trigger) {
+  outline: 4px solid #eab308 !important; /* Thick gold outline */
+  outline-offset: 2px !important;
+  background-color: #fef08a !important; /* Gold backplate */
+  color: #000000 !important; /* Dark text */
+  font-weight: 800 !important;
+  text-decoration: underline !important;
+}
+
+/* Outline Focus state for easy visual navigation */
+.acc-outline-focus *:focus {
+  outline: 5px solid #2563eb !important;
+  outline-offset: 4px !important;
+}
+
+
 
