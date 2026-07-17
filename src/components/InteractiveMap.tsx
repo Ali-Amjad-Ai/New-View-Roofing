@@ -61,7 +61,7 @@ export default function InteractiveMap({ onNavigate }: InteractiveMapProps) {
         {/* Left Interactive panel (5 cols) */}
         <div className="lg:col-span-5 p-6 md:p-8 bg-slate-50 border-r border-slate-100 flex flex-col justify-between space-y-6">
           <div className="space-y-4">
-            <div className="flex items-center space-x-2 text-amber-600">
+            <div className="flex items-center space-x-2 text-blue-600">
               <Navigation className="w-4 h-4 animate-pulse" />
               <span className="text-[10px] font-bold uppercase tracking-widest">Active dispatch map</span>
             </div>
@@ -80,7 +80,7 @@ export default function InteractiveMap({ onNavigate }: InteractiveMapProps) {
               placeholder="Search your city (e.g. Plano, Frisco, Garland...)"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-4 py-3 text-xs text-slate-800 outline-none focus:border-amber-600 focus:ring-1 focus:ring-amber-500 transition-all font-medium shadow-sm"
+              className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-4 py-3 text-xs text-slate-800 outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-500 transition-all font-medium shadow-sm"
             />
           </div>
 
@@ -110,12 +110,12 @@ export default function InteractiveMap({ onNavigate }: InteractiveMapProps) {
                   onClick={() => handleCitySelect(city.name)}
                   className={`w-full flex justify-between items-center px-3 py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                     selectedCity === city.name
-                      ? 'bg-amber-500/10 text-amber-950 border border-amber-500/20'
+                      ? 'bg-blue-500/10 text-blue-950 border border-blue-500/20'
                       : 'text-slate-600 hover:text-slate-950 hover:bg-slate-50'
                   }`}
                 >
                   <span className="flex items-center space-x-2">
-                    <MapPin className={`w-3.5 h-3.5 ${selectedCity === city.name ? 'text-amber-600' : 'text-slate-400'}`} />
+                    <MapPin className={`w-3.5 h-3.5 ${selectedCity === city.name ? 'text-blue-600' : 'text-slate-400'}`} />
                     <span>{city.name}, {city.state}</span>
                   </span>
                   <span className="text-[9px] uppercase tracking-wider font-bold text-slate-400">
@@ -133,18 +133,18 @@ export default function InteractiveMap({ onNavigate }: InteractiveMapProps) {
         {/* Right Graphic Panel (7 cols) */}
         <div className="lg:col-span-7 bg-slate-50/40 p-6 md:p-8 flex flex-col justify-between relative overflow-hidden min-h-[380px]">
           
-          {/* Circular RADAR graphics representation - Ultra refined light colors */}
+          {/* Circular RADAR graphics representation - Blue colored sweeping lines */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40">
             {/* Concentric Rings */}
             <div className="w-80 h-80 rounded-full border border-slate-200 flex items-center justify-center">
               <div className="w-60 h-60 rounded-full border border-slate-150 flex items-center justify-center">
                 <div className="w-40 h-40 rounded-full border border-slate-200/60 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full border border-amber-500/10 bg-amber-500/5 animate-ping"></div>
+                  <div className="w-20 h-20 rounded-full border border-blue-500/10 bg-blue-500/5 animate-ping"></div>
                 </div>
               </div>
             </div>
             {/* Visual sweeping line */}
-            <div className="absolute w-1/2 h-[2px] bg-gradient-to-r from-transparent to-amber-500/10 origin-left rotate-45 animate-[spin_10s_linear_infinite]"></div>
+            <div className="absolute w-1/2 h-[2px] bg-gradient-to-r from-transparent to-blue-500/10 origin-left rotate-45 animate-[spin_10s_linear_infinite]"></div>
           </div>
 
           {/* Active status bubble info */}
@@ -156,7 +156,7 @@ export default function InteractiveMap({ onNavigate }: InteractiveMapProps) {
           {/* Selected City Detail Display */}
           <div className="relative z-10 space-y-6 max-w-md pt-8">
             <div className="space-y-2">
-              <span className="text-[10px] text-amber-600 font-extrabold uppercase tracking-widest">Active Coverage Location</span>
+              <span className="text-[10px] text-blue-600 font-extrabold uppercase tracking-widest">Active Coverage Location</span>
               <h4 className="text-3xl font-black text-slate-900 tracking-tight">
                 {activeCityDetails.name}, {activeCityDetails.state}
               </h4>
@@ -169,11 +169,11 @@ export default function InteractiveMap({ onNavigate }: InteractiveMapProps) {
             <div className="grid grid-cols-2 gap-4">
               <div className="p-3.5 bg-white rounded-xl border border-slate-200/60 space-y-1 shadow-sm">
                 <span className="text-[9px] uppercase tracking-wider font-bold text-slate-400">Dispatch Time</span>
-                <p className="text-xs text-slate-800 font-bold">Under 24 Hours</p>
+                <p className="text-xs text-slate-800 font-bold font-mono">Under 24 Hours</p>
               </div>
               <div className="p-3.5 bg-white rounded-xl border border-slate-200/60 space-y-1 shadow-sm">
                 <span className="text-[9px] uppercase tracking-wider font-bold text-slate-400">Estimators Nearby</span>
-                <p className="text-xs text-slate-800 font-bold">Local Crew Active</p>
+                <p className="text-xs text-slate-800 font-bold font-mono">Local Crew Active</p>
               </div>
             </div>
           </div>

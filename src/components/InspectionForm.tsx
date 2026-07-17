@@ -51,7 +51,7 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
   if (status === 'success') {
     return (
       <div className="bg-white border border-slate-100 rounded-2xl p-8 text-center space-y-6 shadow-2xl animate-fadeIn" id="inspection-success-widget">
-        <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mx-auto text-emerald-600 border border-emerald-100">
+        <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto text-blue-600 border border-blue-100">
           <CheckCircle className="w-8 h-8" />
         </div>
         <div className="space-y-2">
@@ -63,7 +63,7 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
         <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 text-xs font-semibold space-y-2 text-slate-700 max-w-sm mx-auto">
           <div className="flex justify-between">
             <span>Guaranteed Callback:</span>
-            <span className="text-amber-600 font-bold font-mono">Under 24 Hours</span>
+            <span className="text-blue-600 font-bold font-mono">Under 24 Hours</span>
           </div>
           <div className="flex justify-between">
             <span>Est. Inspection Duration:</span>
@@ -72,7 +72,7 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
         </div>
         <button
           onClick={() => setStatus('idle')}
-          className="text-xs font-bold text-amber-600 hover:text-amber-700 transition-colors uppercase tracking-wider cursor-pointer"
+          className="text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors uppercase tracking-wider cursor-pointer"
         >
           Submit Another Request
         </button>
@@ -87,15 +87,15 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
       }`}
       id="inspection-request-form"
     >
-      {/* Top Banner Accent */}
-      <div className="bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-4.5 flex justify-between items-center">
+      {/* Top Banner Accent with Blue/Indigo gradient */}
+      <div className="bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-800 px-6 py-4.5 flex justify-between items-center">
         <div>
-          <h3 className="text-slate-950 font-black text-sm uppercase tracking-wider">Free Roof Inspection</h3>
-          <p className="text-slate-950 font-bold text-[10px] uppercase tracking-wide opacity-90 flex items-center mt-0.5">
-            <Clock className="w-3.5 h-3.5 mr-1" /> Guaranteed contact within 24 hours
+          <h3 className="text-white font-black text-sm uppercase tracking-wider">Free Roof Inspection</h3>
+          <p className="text-slate-200 font-bold text-[10px] uppercase tracking-wide opacity-90 flex items-center mt-0.5">
+            <Clock className="w-3.5 h-3.5 mr-1 text-blue-300" /> Guaranteed contact within 24 hours
           </p>
         </div>
-        <Sparkles className="w-5 h-5 text-slate-950 shrink-0 animate-pulse" />
+        <Sparkles className="w-5 h-5 text-blue-300 shrink-0 animate-pulse" />
       </div>
 
       <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-4">
@@ -117,7 +117,7 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
               value={formData.name}
               onChange={handleInputChange}
               placeholder="John Doe"
-              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:ring-1 focus:ring-amber-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
+              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
             />
           </div>
           <div className="space-y-1.5">
@@ -129,7 +129,7 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
               value={formData.email}
               onChange={handleInputChange}
               placeholder="john@example.com"
-              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:ring-1 focus:ring-amber-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
+              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
             />
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
               value={formData.phone}
               onChange={handleInputChange}
               placeholder="(469) 555-0199"
-              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:ring-1 focus:ring-amber-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
+              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
             />
           </div>
           <div className="space-y-1.5">
@@ -154,7 +154,7 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
               name="serviceType"
               value={formData.serviceType}
               onChange={handleInputChange}
-              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:ring-1 focus:ring-amber-500 rounded-lg px-4 py-2.5 text-xs font-semibold text-slate-700 transition-all outline-none"
+              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg px-4 py-2.5 text-xs font-semibold text-slate-700 transition-all outline-none"
             >
               <option value="residential">Residential Home Roofing</option>
               <option value="commercial">Commercial / Industrial Property</option>
@@ -173,7 +173,7 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
             value={formData.address}
             onChange={handleInputChange}
             placeholder="123 Texas Trail"
-            className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:ring-1 focus:ring-amber-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
+            className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
           />
         </div>
 
@@ -186,7 +186,7 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
               value={formData.city}
               onChange={handleInputChange}
               placeholder="Dallas"
-              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:ring-1 focus:ring-amber-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
+              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
             />
           </div>
           <div className="space-y-1.5">
@@ -197,7 +197,7 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
               value={formData.zip}
               onChange={handleInputChange}
               placeholder="75201"
-              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:ring-1 focus:ring-amber-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
+              className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none"
             />
           </div>
         </div>
@@ -211,7 +211,7 @@ export default function InspectionForm({ compact = false }: InspectionFormProps)
             value={formData.message}
             onChange={handleInputChange}
             placeholder="Describe your current issue (e.g. active roof leak, storm damage estimate needed...)"
-            className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-amber-500 focus:ring-1 focus:ring-amber-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none resize-none"
+            className="w-full bg-slate-50/50 border border-slate-200 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-lg px-4 py-2.5 text-xs font-medium text-slate-900 transition-all outline-none resize-none"
           ></textarea>
         </div>
 

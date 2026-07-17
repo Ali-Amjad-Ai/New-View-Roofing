@@ -39,7 +39,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
     {
       name: 'Roofing Types',
       id: 'roofing',
-      icon: <Shield className="w-4 h-4 text-amber-500" />,
+      icon: <Shield className="w-4 h-4 text-blue-600" />,
       submenus: [
         { name: 'Asphalt Roofing', id: 'roofing-asphalt' },
         { name: 'Asphalt Roof Repair', id: 'roofing-asphalt-repair' },
@@ -57,7 +57,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
     {
       name: 'Residential',
       id: 'residential',
-      icon: <Home className="w-4 h-4 text-amber-500" />,
+      icon: <Home className="w-4 h-4 text-blue-600" />,
       submenus: [
         { name: 'Energy Efficient Roofing', id: 'residential-energy' },
         { name: 'Exterior Renovation', id: 'residential-exterior' },
@@ -77,7 +77,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
     {
       name: 'Commercial & Industrial',
       id: 'commercial',
-      icon: <Activity className="w-4 h-4 text-amber-500" />,
+      icon: <Activity className="w-4 h-4 text-blue-600" />,
       submenus: [
         { name: 'Commercial Roof Replacement', id: 'commercial-replacement' },
         { name: 'Commercial Roof Coatings', id: 'commercial-coatings' },
@@ -95,7 +95,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
     {
       name: 'Storm Damage',
       id: 'storm',
-      icon: <AlertTriangle className="w-4 h-4 text-amber-500" />,
+      icon: <AlertTriangle className="w-4 h-4 text-blue-600" />,
       submenus: [
         { name: 'Hail Damage Roof Repair', id: 'storm-hail' },
         { name: 'Wind Damage Roof Repair', id: 'storm-wind' },
@@ -105,7 +105,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
     {
       name: 'About Us',
       id: 'about',
-      icon: <Users className="w-4 h-4 text-amber-500" />,
+      icon: <Users className="w-4 h-4 text-blue-600" />,
       submenus: [
         { name: 'Meet Our Team', id: 'about-team' },
         { name: 'Testimonials', id: 'about-testimonials' }
@@ -114,7 +114,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
     {
       name: 'Resources',
       id: 'resources',
-      icon: <BookOpen className="w-4 h-4 text-amber-500" />,
+      icon: <BookOpen className="w-4 h-4 text-blue-600" />,
       submenus: [
         { name: 'Educational Blog', id: 'resources-blog' },
         { name: 'Roof Financing Options', id: 'resources-financing' },
@@ -141,7 +141,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm" id="nav-header">
       {/* Top Utility Bar */}
-      <div className="bg-slate-900 text-slate-100 py-2.5 px-4 text-xs font-medium border-b border-slate-800 hidden md:block">
+      <div className="bg-slate-900 text-slate-100 py-2.5 px-4 text-xs font-medium border-b border-slate-800 hidden md:block font-sans">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-6">
             <span className="flex items-center space-x-1.5">
@@ -149,7 +149,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
               <span className="text-slate-300 font-mono">Active Response: 24h Inspections</span>
             </span>
             <span className="flex items-center space-x-1.5">
-              <Award className="w-3.5 h-3.5 text-amber-400" />
+              <Award className="w-3.5 h-3.5 text-blue-400" />
               <span>GAF Master Elite® (Top 3%)</span>
             </span>
             <span className="flex items-center space-x-1.5">
@@ -160,14 +160,14 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
           <div className="flex items-center space-x-6">
             <button
               onClick={() => handleLinkClick('service-areas')}
-              className="hover:text-amber-400 transition-colors flex items-center space-x-1 font-semibold cursor-pointer"
+              className="hover:text-blue-400 transition-colors flex items-center space-x-1 font-semibold cursor-pointer"
             >
-              <MapPin className="w-3.5 h-3.5" />
+              <MapPin className="w-3.5 h-3.5 text-blue-400" />
               <span>Dallas-Fort Worth Metroplex & Beyond</span>
             </button>
             <a
               href="tel:(469)716-5426"
-              className="text-amber-400 hover:text-amber-300 font-bold tracking-wider flex items-center space-x-1.5 transition-all transform hover:scale-105"
+              className="text-blue-400 hover:text-blue-300 font-bold tracking-wider flex items-center space-x-1.5 transition-all transform hover:scale-105"
             >
               <Phone className="w-3.5 h-3.5 animate-bounce" />
               <span>(469) 716-5426</span>
@@ -178,26 +178,34 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
 
       {/* Main Brand & Nav Bar */}
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
-        {/* Brand Logo */}
+        {/* Brand Logo - Upgraded Beautiful Blue/Indigo Star Design */}
         <div
           onClick={() => handleLinkClick('home')}
           className="flex items-center space-x-3 cursor-pointer group"
           id="nav-brand-logo"
         >
-          <div className="relative">
-            <div className="w-11 h-11 bg-gradient-to-tr from-amber-600 to-amber-500 rounded-lg flex items-center justify-center shadow-lg shadow-amber-500/10 group-hover:rotate-12 transition-transform duration-300">
-              <span className="text-white font-black text-xl tracking-tighter">N</span>
-              <span className="text-slate-950 font-black text-xl tracking-tighter -ml-1">V</span>
-            </div>
-            {/* Minimalist American Flag / Star Icon Overlay */}
-            <span className="absolute -top-1 -right-1 text-[10px] bg-slate-950 px-1 py-0.5 rounded-full border border-slate-800 text-amber-500 font-bold font-mono">
+          <div className="relative flex items-center justify-center">
+            {/* Elegant, high-end double layer SVG logo (Star + Rooflines) */}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" className="w-11 h-11 transition-all duration-300 group-hover:scale-110">
+              <defs>
+                <linearGradient id="logo-star-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#2563eb" />
+                  <stop offset="1" stopColor="#4f46e5" />
+                </linearGradient>
+              </defs>
+              <path d="M20,2 L24.5,14 L37,14 L27,21.5 L31,34 L20,26.5 L9,34 L13,21.5 L3,14 L15.5,14 Z" fill="url(#logo-star-grad)" />
+              <path d="M12,23 L20,15 L28,23" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              <path d="M8,27 L20,15 L32,27" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+              <text x="20" y="31" fill="#ffffff" fontSize="7" fontWeight="900" textAnchor="middle" letterSpacing="0.05em" fontFamily="system-ui, sans-serif">N V</text>
+            </svg>
+            <span className="absolute -bottom-1 -right-1 text-[8px] bg-slate-900 text-white px-1 py-0.5 rounded-full border border-slate-700 font-bold font-mono">
               ★
             </span>
           </div>
           <div className="flex flex-col">
             <div className="flex items-center space-x-1.5">
               <span className="text-xl font-black text-slate-900 tracking-tight leading-none">
-                NEW<span className="text-amber-600">VIEW</span>
+                NEW<span className="text-blue-600">VIEW</span>
               </span>
             </div>
             <span className="text-[10px] text-slate-500 tracking-[0.25em] uppercase font-extrabold mt-1">
@@ -212,7 +220,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
             onClick={() => handleLinkClick('home')}
             className={`px-3.5 py-2 rounded-lg text-sm font-medium tracking-tight transition-all duration-150 cursor-pointer ${
               currentPage === 'home'
-                ? 'text-amber-700 bg-amber-500/10 font-bold'
+                ? 'text-blue-700 bg-blue-500/10 font-bold'
                 : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
             }`}
           >
@@ -241,12 +249,12 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                       onClick={() => handleLinkClick(sub.id as PageId)}
                       className={`w-full text-left px-3 py-2 rounded-lg text-xs font-medium transition-all duration-150 flex items-center justify-between group/item cursor-pointer ${
                         currentPage === sub.id
-                          ? 'bg-amber-500/10 text-amber-800 font-semibold'
+                          ? 'bg-blue-500/10 text-blue-800 font-semibold'
                           : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                       }`}
                     >
                       <span>{sub.name}</span>
-                      <span className="text-[10px] text-slate-400 group-hover/item:text-amber-600 transition-colors">→</span>
+                      <span className="text-[10px] text-slate-400 group-hover/item:text-blue-600 transition-colors">→</span>
                     </button>
                   ))}
                 </div>
@@ -258,7 +266,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
             onClick={() => handleLinkClick('service-areas')}
             className={`px-3.5 py-2 rounded-lg text-sm font-medium tracking-tight transition-all duration-150 cursor-pointer ${
               currentPage === 'service-areas'
-                ? 'text-amber-700 bg-amber-500/10 font-bold'
+                ? 'text-blue-700 bg-blue-500/10 font-bold'
                 : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
             }`}
           >
@@ -276,7 +284,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
           </button>
           <button
             onClick={() => handleLinkClick('residential-inspection')}
-            className="px-5 py-2.5 bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-800 hover:to-slate-700 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95 cursor-pointer"
+            className="px-5 py-2.5 bg-gradient-to-r from-blue-700 to-indigo-700 hover:from-blue-600 hover:to-indigo-600 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95 cursor-pointer"
           >
             Free Inspection
           </button>
@@ -286,7 +294,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
         <div className="flex items-center space-x-3.5 lg:hidden" id="nav-mobile-triggers">
           <a
             href="tel:(469)716-5426"
-            className="p-2.5 bg-slate-50 hover:bg-slate-100 text-amber-600 rounded-lg transition-colors border border-slate-200/80 flex items-center justify-center shadow-sm"
+            className="p-2.5 bg-slate-50 hover:bg-slate-100 text-blue-600 rounded-lg transition-colors border border-slate-200/80 flex items-center justify-center shadow-sm"
             title="Call Now"
           >
             <Phone className="w-4 h-4" />
@@ -306,7 +314,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
         <div className="lg:hidden fixed inset-0 top-[73px] bg-white backdrop-blur-md z-40 overflow-y-auto border-t border-slate-100 animate-fadeIn" id="mobile-drawer">
           <div className="p-4 space-y-4">
             {/* Quick Call Action */}
-            <div className="p-4 bg-amber-50 border border-amber-200/60 rounded-xl flex justify-between items-center">
+            <div className="p-4 bg-blue-50 border border-blue-200/60 rounded-xl flex justify-between items-center">
               <div>
                 <p className="text-xs text-slate-500 font-medium">Need immediate assistance?</p>
                 <p className="text-sm font-bold text-slate-900">Call DFW Office Today</p>
@@ -338,7 +346,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                       {item.icon}
                       <span>{item.name}</span>
                     </div>
-                    <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${activeDropdown === item.id ? 'rotate-180 text-amber-600' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${activeDropdown === item.id ? 'rotate-180 text-blue-600' : ''}`} />
                   </button>
 
                   {activeDropdown === item.id && (
@@ -347,9 +355,9 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                         <button
                           key={sub.id}
                           onClick={() => handleLinkClick(sub.id as PageId)}
-                          className="w-full text-left px-3 py-2.5 text-xs font-semibold text-slate-600 hover:text-amber-600 transition-colors flex items-center space-x-2 cursor-pointer"
+                          className="w-full text-left px-3 py-2.5 text-xs font-semibold text-slate-600 hover:text-blue-600 transition-colors flex items-center space-x-2 cursor-pointer"
                         >
-                          <span className="text-amber-500 font-mono text-[9px]">•</span>
+                          <span className="text-blue-500 font-mono text-[9px]">•</span>
                           <span>{sub.name}</span>
                         </button>
                       ))}
@@ -362,7 +370,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                 onClick={() => handleLinkClick('service-areas')}
                 className="w-full text-left px-4 py-3 rounded-lg text-sm font-bold text-slate-700 hover:text-slate-950 hover:bg-slate-50 flex items-center space-x-2 cursor-pointer"
               >
-                <MapPin className="w-4 h-4 text-amber-600" />
+                <MapPin className="w-4 h-4 text-blue-600" />
                 <span>Service Areas</span>
               </button>
             </div>
@@ -370,7 +378,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
             <div className="pt-4 space-y-2">
               <button
                 onClick={() => handleLinkClick('residential-inspection')}
-                className="w-full py-3 bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-800 text-white font-bold rounded-lg text-sm text-center shadow-md cursor-pointer"
+                className="w-full py-3 bg-gradient-to-r from-blue-700 to-indigo-700 hover:from-blue-600 text-white font-bold rounded-lg text-sm text-center shadow-md cursor-pointer"
               >
                 Request Free Inspection
               </button>

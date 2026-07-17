@@ -27,19 +27,30 @@ export default function Footer({ onNavigate }: FooterProps) {
   };
 
   return (
-    <footer className="bg-[#0a0e1a] text-slate-300 border-t border-slate-950 pt-16 pb-8 font-sans animate-fadeIn" id="footer-section">
+    <footer className="bg-[#080c16] text-slate-300 border-t border-slate-950 pt-16 pb-8 font-sans animate-fadeIn" id="footer-section">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Upper Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Column 1: Brand & Credibility */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleLinkClick('home')}>
-              <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center font-black text-slate-950 text-lg">
-                NV
+            <div className="flex items-center space-x-3 cursor-pointer group" onClick={() => handleLinkClick('home')}>
+              <div className="relative">
+                {/* Upgraded Professional SVG Star Logo */}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" className="w-10 h-10 transition-transform duration-300 group-hover:scale-105">
+                  <defs>
+                    <linearGradient id="footer-star-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#3b82f6" />
+                      <stop offset="1" stopColor="#4f46e5" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M20,2 L24.5,14 L37,14 L27,21.5 L31,34 L20,26.5 L9,34 L13,21.5 L3,14 L15.5,14 Z" fill="url(#footer-star-grad)" />
+                  <path d="M12,23 L20,15 L28,23" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                  <path d="M8,27 L20,15 L32,27" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                </svg>
               </div>
               <div>
                 <h3 className="text-white font-extrabold text-lg tracking-tight">
-                  NEW<span className="text-amber-500">VIEW</span>
+                  NEW<span className="text-blue-500">VIEW</span>
                 </h3>
                 <p className="text-[9px] text-slate-400 tracking-wider uppercase font-bold">ROOFING & CONTRACTING</p>
               </div>
@@ -55,7 +66,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 href="https://instagram.com/newviewroofing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-900/60 hover:bg-slate-900 text-slate-400 hover:text-amber-500 flex items-center justify-center border border-slate-800 transition-colors"
+                className="w-9 h-9 rounded-lg bg-slate-900/60 hover:bg-slate-900 text-slate-400 hover:text-blue-500 flex items-center justify-center border border-slate-800 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
@@ -64,7 +75,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 href="https://facebook.com/newviewroofing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-900/60 hover:bg-slate-900 text-slate-400 hover:text-amber-500 flex items-center justify-center border border-slate-800 transition-colors"
+                className="w-9 h-9 rounded-lg bg-slate-900/60 hover:bg-slate-900 text-slate-400 hover:text-blue-500 flex items-center justify-center border border-slate-800 transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -73,22 +84,22 @@ export default function Footer({ onNavigate }: FooterProps) {
                 href="https://youtube.com/@newviewroofing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-900/60 hover:bg-slate-900 text-slate-400 hover:text-amber-500 flex items-center justify-center border border-slate-800 transition-colors"
+                className="w-9 h-9 rounded-lg bg-slate-900/60 hover:bg-slate-900 text-slate-400 hover:text-blue-500 flex items-center justify-center border border-slate-800 transition-colors"
                 aria-label="YouTube"
               >
                 <Youtube className="w-4 h-4" />
               </a>
             </div>
 
-            {/* Hearth Financing Badge */}
+            {/* Hearth Financing Partner Badge */}
             <div className="p-4 bg-slate-900/40 rounded-xl border border-slate-900/60 space-y-2">
-              <span className="text-[10px] uppercase tracking-wider font-bold text-amber-500">Financing Partner</span>
+              <span className="text-[10px] uppercase tracking-wider font-bold text-blue-400">Financing Partner</span>
               <p className="text-xs text-slate-300 font-semibold leading-normal">
                 Explore low monthly payments & 0%* APR options for up to 18 months via Hearth.
               </p>
               <button
                 onClick={() => handleLinkClick('resources-financing')}
-                className="text-xs font-bold text-white hover:text-amber-500 underline transition-all text-left block cursor-pointer"
+                className="text-xs font-bold text-white hover:text-blue-400 underline transition-all text-left block cursor-pointer"
               >
                 Apply In 2 Minutes
               </button>
@@ -97,7 +108,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Column 2: Residential Services */}
           <div>
-            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-6 border-l-2 border-amber-500 pl-3">
+            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-6 border-l-2 border-blue-500 pl-3">
               Residential Solutions
             </h4>
             <ul className="space-y-3.5 text-sm font-medium">
@@ -124,7 +135,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Column 3: Commercial Services */}
           <div>
-            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-6 border-l-2 border-amber-500 pl-3">
+            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-6 border-l-2 border-blue-500 pl-3">
               Commercial & Industrial
             </h4>
             <ul className="space-y-3.5 text-sm font-medium">
@@ -151,12 +162,12 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Column 4: Contact & Office Info */}
           <div className="space-y-6">
-            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-2 border-l-2 border-amber-500 pl-3">
+            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-2 border-l-2 border-blue-500 pl-3">
               Corporate Office
             </h4>
             <ul className="space-y-4 text-sm text-slate-400 font-medium">
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
                 <span>
                   4722 Gaston Ave,
                   <br />
@@ -164,19 +175,19 @@ export default function Footer({ onNavigate }: FooterProps) {
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-amber-500 shrink-0" />
+                <Phone className="w-5 h-5 text-blue-500 shrink-0" />
                 <a href="tel:(469)716-5426" className="hover:text-white transition-colors font-bold font-mono">
                   (469) 716-5426
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-amber-500 shrink-0" />
+                <Mail className="w-5 h-5 text-blue-500 shrink-0" />
                 <a href="mailto:info@newviewroofing.com" className="hover:text-white transition-colors">
                   info@newviewroofing.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <Clock className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
+                <Clock className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
                 <span>
                   Monday - Saturday
                   <br />
@@ -192,7 +203,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         {/* Credentials and Association Logos banner */}
         <div className="py-8 my-8 border-t border-b border-slate-900 grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center">
           <div className="flex flex-col items-center">
-            <span className="text-amber-500 font-black text-sm">GAF MASTER ELITE®</span>
+            <span className="text-blue-400 font-black text-sm">GAF MASTER ELITE®</span>
             <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Top 3% Certified</span>
           </div>
           <div className="flex flex-col items-center">
@@ -200,7 +211,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Military Values</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-amber-500 font-black text-sm">BBB ACCREDITED</span>
+            <span className="text-blue-400 font-black text-sm">BBB ACCREDITED</span>
             <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">A+ Rating</span>
           </div>
           <div className="flex flex-col items-center">
@@ -208,7 +219,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">North Texas Roofing</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-amber-500 font-black text-sm">LIVING MAGAZINE</span>
+            <span className="text-blue-400 font-black text-sm">LIVING MAGAZINE</span>
             <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Best Readers Choice</span>
           </div>
         </div>
